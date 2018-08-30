@@ -8,7 +8,6 @@ public class materyScript : MonoBehaviour {
 	private float x;
 	private float z;
 	private Rigidbody rigd;
-	float upspeed =4.0f;
 
 	// Use this for initialization
 	void Start () {

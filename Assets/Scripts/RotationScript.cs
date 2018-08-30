@@ -9,7 +9,7 @@ public class RotationScript : MonoBehaviour {
 	private CharacterController controller;
 	private Vector3 moveDirection;
 	public Animator animator;
-	//private bool isControl;
+
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,7 @@ public class RotationScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		velocity = Vector3.zero;
-		//if(isControl){
+
 		if (Input.GetKey (KeyCode.UpArrow)) {
 			velocity.x += 1;
 		}
@@ -60,10 +60,8 @@ public class RotationScript : MonoBehaviour {
 		} else {
 			animator.SetBool("Walk", false);
 		}
-	//}
+	
 }
-	//public void ChangeControl(bool controlFlag){
-		//isControl = controlFlag;
-	//}
+
 }
 

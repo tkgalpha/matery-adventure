@@ -32,7 +32,7 @@ public class ChangeChara : MonoBehaviour {
 				flag = false;
 			}
 			charaLists [i].GetComponent<RotationScript> ().enabled = flag;
-			//charaLists [i].GetComponent<Animator> ().SetFloat ("Walk", 0);
+
 		}
 		nowChara = nextChara;
 				

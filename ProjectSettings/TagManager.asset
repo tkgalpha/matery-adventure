@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - block
   - Rock
+  - Firebox
+  - Fire
   layers:
   - Default
   - TransparentFX

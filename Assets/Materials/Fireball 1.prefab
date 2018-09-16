@@ -187,7 +187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExploadObj: {fileID: 1123659541427918, guid: ea9e8105f9b950f43aca651c619164d8, type: 2}
   ExploadPos: {fileID: 1503240689789358}
-  RockHP: 1
 --- !u!135 &135551961730172884
 SphereCollider:
   m_ObjectHideFlags: 1

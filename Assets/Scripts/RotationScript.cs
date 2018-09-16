@@ -9,7 +9,10 @@ public class RotationScript : MonoBehaviour {
 	private CharacterController controller;
 	private Vector3 moveDirection;
 	public Animator animator;
-
+	public GameObject Firebox;
+	public GameObject FireboxPos;
+	public GameObject newmatery;
+	public GameObject newmateryPos;
 
 	// Use this for initialization
 	void Start () {
@@ -62,6 +65,16 @@ public class RotationScript : MonoBehaviour {
 		}
 	
 }
+	void OnTriggerEnter(Collider col){
+		if (col.tag == "Firebox") {
+			Instantiate (Firebox, FireboxPos.transform.position, Quaternion.identity);
+			Instantiate (newmatery, newmateryPos.transform.position, Quaternion.identity);
 
+			gameObject.SetActive (false);
+			Destroy (col.gameObject);
+
+
+		}
+	}
 }
 

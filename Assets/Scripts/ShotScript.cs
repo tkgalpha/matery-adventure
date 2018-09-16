@@ -5,7 +5,8 @@ using UnityEngine;
 public class ShotScript : MonoBehaviour {
 	public GameObject ExploadObj;
 	public GameObject ExploadPos;
-	public  float RockHP = 1;
+	public float RockHP = 3.0f;
+
 	void Start () {
 		//particle = this.GetComponent<ParticleSystem> ();
 		//particle.Stop ();
@@ -25,9 +26,9 @@ public class ShotScript : MonoBehaviour {
 		if (col.tag == "Enemy") {
 			Instantiate (ExploadObj, ExploadPos.transform.position, Quaternion.identity);
 
-			Destroy (col.gameObject);
+			col.gameObject.SetActive (false);
 			Destroy (gameObject);
-			//Destroy (ExploadObj);
+		//Destroy (ExploadObj);
 
 		}
 	
@@ -39,18 +40,17 @@ public class ShotScript : MonoBehaviour {
 		//	Destroy (ExploadObj);
 		}
 		if (col.tag == "Rock") {
+			RockHP -= 1.0f;
+			//Debug.Log ("kusa");
 
 			Instantiate (ExploadObj, ExploadPos.transform.position, Quaternion.identity);
-
-			Destroy (gameObject);
-		
-			RockHP -= 1;
+			if (RockHP == 0.0f) {
+				col.gameObject.SetActive (false);				Debug.Log ("kusa");
+			}
+	
 
 			}
-		if (RockHP == 0) {
-			Debug.Log (RockHP+RockHP);
-			Destroy (col.gameObject);
-		}
+
 	}
 }
 
